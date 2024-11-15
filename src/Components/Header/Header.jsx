@@ -1,12 +1,15 @@
 import React from 'react'
 import './header.css'
 import logo from '../../assets/logo.png'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const Header = () => {
+
+const location = useLocation()
+console.log(typeof location.pathname)
   return (
-    <header id="header">
-        <div className="header_top mb-60">
+    <header id="header" className={`${location.pathname === '/contact' && 'bg_primary'}`}>
+        <div className="header_top">
             <div className="container flex justify-between">
             <div className="header_left flex items-center gap-20">
                 <div id="logo" className="logo">

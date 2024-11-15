@@ -5,7 +5,9 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoTimeOutline } from "react-icons/io5";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
+
 const MediaCenter = ({ title, address, phone, hours1, hours2 }) => {
+
     return (
         <div className="media-center">
             <h3 className="mb-10">{title}</h3>
@@ -32,11 +34,20 @@ const MediaCenter = ({ title, address, phone, hours1, hours2 }) => {
 };
 
 const ContactLocationSection = () => {
+
     return (
-        <div id='contact_location_section' className='container location_container flex gap-30'>
+        <div id='contact_location_section' className='container location_container flex gap-50'>
             <div className="location_left">
                 <div className="map-container">
-                    <img src="path/to/map-image.png" alt="Map" className="w-full rounded-lg" />
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12621.581077631103!2d-122.4088354627199!3d37.73387017211297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7f02449cda7b%3A0x56b4d414afddd65!2sSilver%20Terrace%2C%20San%20Francisco%2C%20CA%2094124%2C%20USA!5e0!3m2!1sen!2sbd!4v1731683762195!5m2!1sen!2sbd"
+                    width='100%'
+                    height={450}
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    />
                 </div>
             </div>
 
@@ -81,7 +92,7 @@ const ContactLocationSection = () => {
                     </li>
                 </ul>
             </div>
-
+            
         </div>
     )
 }

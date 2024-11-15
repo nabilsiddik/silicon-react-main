@@ -4,7 +4,7 @@
 }
 
 #header .header_top{
-    padding-top: 20px;
+    padding: 25px 0;
 }
 #header .header_left{
     width: 60%;
@@ -77,4 +77,7 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(24px);
+}
+.bg_primary{
+    background: #F3F6FF;
 }
