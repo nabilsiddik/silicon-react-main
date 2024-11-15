@@ -1,0 +1,59 @@
+/** FAQ Section **/
+#faq .contact_box{
+    padding: 25px 20px;
+    border: 1px solid #E2E5F1;
+    border-radius: 10px;
+}
+#faq .contact_box .icon{
+    margin-bottom: 10px;
+}
+#faq .contact_box a .icon{
+    margin-bottom: 0; 
+    margin-top: 5px;
+}
+#faq .container .section_heading_mobile{
+    display: none;
+}
+
+#faq .contact_box.box_1 .icon, a{
+    color: var(--primary-color)
+}
+
+#faq .contact_box.box_2 .icon, .contact_box.box_2 a{
+    color: #22C55E;
+}
+
+#faq .faq_right{
+    width: 60%;
+}
+#faq .faq_right ul li{
+    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+#faq .faq_right ul li.open .icon{
+    background: var(--primary-color);
+    color: #fff;
+}
+#faq .faq_right ul li .icon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3F6FF;
+    border-radius: 50%;
+}
+#faq .accordion_content p{
+    color: #5f5f63
+}
+#faq .accordion_header{
+    cursor: pointer;
+    padding-bottom: 10px;
+    z-index: 10;
+}
+#faq .accordion_content.hidden{
+    transform: translateY(-80px);
+    opacity: 0;
+    display: none;
+}

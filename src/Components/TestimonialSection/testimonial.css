@@ -1,0 +1,40 @@
+/** Testimonial Section **/
+.body_style #faq .accordion ul li .icon{
+    background: #2d2e3b;
+    color: #fff;
+}
+.body_style #testimonial .testimonial{
+    background: #2d2e3b;
+}
+#testimonial{
+    background: #F3F6FF;
+    padding: 70px 0;
+}
+.body_style #testimonial{
+    background: #222330!important;
+}
+
+
+#testimonial ul li{
+    color: #FFBA08; 
+}
+#testimonial .testimonial{
+    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    padding: 20px 20px;
+    border-radius: 10px;
+    position: relative;
+    background: #fff;
+}
+#testimonial .heading_text{
+    width: 30%;
+}
+#testimonial .testimonials{
+    width: 70%;
+}
+#testimonial .testimonial .quote_icon{
+    position: absolute;
+    top: -16px;
+}
+#testimonial .testimonial ul{
+    margin-top: 30px;
+}

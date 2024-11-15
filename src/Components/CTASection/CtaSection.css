@@ -1,0 +1,14 @@
+
+/** CTA sectin **/ 
+#cta .container{
+    max-width: 1100px;
+}
+#cta .icon{
+    color: var(--primary-color)
+}
+#cta .cta_row_2 .row_2_left{
+    width: 50%;
+}
+#cta .cta_row_2 .row_2_right{
+    width: 50%;
+}

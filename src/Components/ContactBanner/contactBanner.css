@@ -1,0 +1,15 @@
+#contact_banner{
+    background: #F3F6FF;
+    padding: 20px 0;
+    margin-bottom: 200px;
+}
+#contact_banner h2{
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+#contact_banner .banner_left{
+    width: 50%;
+}
+#contact_banner .banner_right{
+    width: 50%;
+}

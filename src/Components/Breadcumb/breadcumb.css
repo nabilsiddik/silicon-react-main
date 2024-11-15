@@ -1,0 +1,6 @@
+#breadcumb .path_name{
+    color: var(--primary-color);
+}
+#breadcumb{
+    margin-bottom: 30px;
+}

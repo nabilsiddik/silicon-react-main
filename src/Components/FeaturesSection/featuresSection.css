@@ -1,0 +1,20 @@
+/** Features Section **/
+#features .features_left{
+    width: 35%;
+}
+#features .features_right{
+    width: 65%;
+}
+#features .features_right .image_icon{
+    background: rgba(99, 102, 241, 0.08);
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+#features .features_right .image_icon img{
+    width: 30px;
+    
+}

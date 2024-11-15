@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --primary-color: #6366F1;
+    --text-color: #000;
+    --body-bg-color: #fff;
+
+    --dark-body-bg-color: #0B0F19;
+    --dark-body-text-color: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--body-bg-color);
+}
+.body_style{
+    background-color: var(--dark-body-bg-color)!important;
+    color: var(--dark-body-text-color)!important;
+}
+.container{
+    max-width: 1296px;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-body-color)
+}
+ul li{
+    list-style: none;
+}
+h1{
+    font-size: 46px;
+}
+h2{
+    font-size: 36px;
+}
+h3{
+    font-size: 24px;
+}
+
+.flex{
+    display: flex;
+}
+.direction-column{
+    flex-direction: column;
+}
+.direction-row{
+    flex-direction: row;
+}
+.block{
+    display: block;
+}
+.text-center{
+    text-align: center;
+}
+.items-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.justify-end{
+    justify-content: end;
+}
+.gap-5{
+    gap: 5px;
+}
+.gap-10{
+    gap: 10px;
+}
+.gap-15{
+    gap: 15px;
+}
+.gap-20{
+    gap: 20px;
+}
+.gap-30{
+    gap: 30px;
+}
+
+.py-10{
+    padding: 10px 0;
+}
+.px-10{
+    padding: 0px 10px;
+}
+.py-20{
+    padding: 20px 0;
+}
+.px-20{
+    padding: 0px 20px;
+}
+
+.my-10{
+    margin: 10px 0;
+}
+.mx-10{
+    margin: 0px 10px;
+}
+
+.my-20{
+    margin: 20px 0;
+}
+.mx-20{
+    margin: 0px 20px;
+}
+
+
+.pt-20{
+    padding-top: 20px;
+}
+.pt-30{
+    padding-top: 30px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.pb-30{
+    padding-bottom: 30px;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.mt-70{
+    margin-top: 70px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-60{
+    margin-bottom: 60px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+
+button{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+section{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.body_style .icon{
+    color: #000;
+}
+
+
+
+
+
+
+/** Responsive CSS **/
+/** When Screen Size 1400 Px **/
+@media screen and (max-width: 1400px){
+    .container{
+        max-width: 85%;
+    }
+}
+
+/** Tablet Responsive **/
+@media screen and (max-width: 992px){
+    /** Global **/
+    .container{
+        max-width: 85%;
+    }
+
+    /** Header Section Responsive **/
+    #header .header_top nav{
+        display: none;
+    }
+
+    #header .header_top .signup{
+        display: none;
+    }
+    #header .header_top .mobile_menu_icon{
+        display: block;
+    }
+    #header .header_top .mobile_menu_icon span{
+        font-size: 20px;
+        color: #3E4265;
+    }
+
+    .body_style #header .header_top .mobile_menu_icon span{
+        color: #fff;
+    }
+
+
+    /** Hero Section Responsive **/
+    #hero .container{
+        gap: 0;
+    }
+    #hero .title_for_mobile{
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: -30px;
+    }
+    #hero .container .hero_left{
+        width: 45%
+    }
+    #hero .container .hero_right{
+        width: 55%
+    }
+    #hero .container .hero_left h1{
+        display: none;
+    }
+    #hero .container .app_download img{
+        max-width: 130px;
+    }
+    #hero .container .hero_left p br{
+        display: none;
+    }
+    #hero .container .discover_more{
+        margin-top: 20px;
+    }
+
+
+    /** Brand Section responsive **/
+    #brand_section .res_hide{
+        display: none;
+    }
+
+
+    /** Features Section Responsive **/
+    #features .container{
+        display: block;
+    }
+    #features .container .features_left{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        display: none;
+    }
+
+    #features .container .features_right{
+        width: 100%;
+    }
+
+    #features .container .features_right .section_heading{
+        text-align: center;
+    }
+
+
+    /** Work Section Responsive **/
+    #work .container{
+        display: block;
+    }
+
+    /** CTA Section Responsive **/
+    #cta{
+        display: none;
+    }
+    #cta .container{
+        max-width: 80%;
+    }
+    #cta .container .cta_row_1{
+        margin-bottom: 30px;
+    }
+    #cta .container .row_1_left br{
+        display: none;
+    }
+    #cta .container .cta_row_2 .cta_icon_boxes{
+        gap: 20px;
+    }
+
+
+    /** Testimonial Section Responsive **/
+    #testimonial{
+        display: none;
+    }
+    #testimonial .container{
+        display: block;
+    }
+    #testimonial .container .heading_text{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    #testimonial .container .testimonials{
+        width: 100%;
+    }
+
+
+    /** FAQ Section Responsive **/
+    #faq .container{
+        flex-direction: column-reverse;
+    }
+    #faq .container .contact_box{
+        width: 50%;
+    }
+    #faq .container .section_heading.desktop{
+        display: none;
+    }
+    #faq .container .section_heading_mobile{
+        display: block;
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+    #faq .faq_right{
+        width: 100%;
+    }
+
+
+    /** Newsletter Section Responsive **/
+    #newsletter .container{
+        gap: 10px;
+    }
+
+    #newsletter .container .heading{
+        width: 50%;
+    }
+    #newsletter .container .form{
+        width: 50%;
+    }
+    #newsletter .container .form form{
+        width: 100%;
+    }
+    #newsletter .container .form form .input_group{
+        width: 60%;
+    }
+    #newsletter .form input[type="email"] {
+        padding: 16px 35px;
+        padding-right: 10px;
+        width: 100%;
+    }
+    #newsletter .form input[type="submit"] {
+        padding: 18px 15px;
+        width: 40%;
+    }
+    #newsletter h3{
+        display: none;
+    }
+    #newsletter .newsletter_mobile_text{
+        display: block;
+    }
+
+}
+
+
+
+
+
+/** Mobile Responsivness **/
+@media screen and (max-width: 768px){
+    /** Global **/
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .container{
+        max-width: 90%;
+    }
+
+    /** Header Section **/
+    #header .header_right .mode_text{
+        display: none;
+    }
+
+
+    /** Hero Section **/
+    #hero .title_for_mobile h1{
+        font-size: 35px;
+    }
+    #hero p{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    #hero .container{
+        display: block;
+    }
+    #hero .title_for_mobile{
+        margin-bottom: 0px;
+    }
+    #hero .container .hero_left{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    #hero .container .hero_left h1{
+        display: none;
+    }
+    #hero .container .app_download{
+        display: block;
+    }
+    #hero .container .discover_more{
+        justify-content: center;
+    }
+
+    #hero .hero_right{
+        display: none;
+    }
+
+
+
+    /** Features Section Responsive **/
+    #features .section_heading{
+        text-align: center;
+    }
+
+    #features .all_features {
+        display: block;
+    }
+
+    #features .features_col_1{
+        margin-bottom: 50px;
+    }
+
+
+    /** Work Section **/
+    #work .work_images{
+        display: none!important;
+        text-align: center;
+    }
+    #work .mobile_image{
+        display: block;
+        text-align: center;
+    }
+    #work .work_image img{
+        width: 100%;
+    }
+    #work .section_heading p {
+        max-width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    #work 
+
+    /** FAQ Section Responsive **/
+    #faq .faq_right .accordion li{
+        font-size: 15px;
+        padding: 13px;
+    }
+    #faq .faq_right .accordion li p{
+        width: 80%;
+    }
+    #faq .contact .contact_box{
+        display: none;
+    }
+    #faq .contact button{
+        margin: 0 auto;
+    }
+
+
+    /** Newsletter Section responsive **/
+    #newsletter .container{
+        flex-direction: column;
+        gap: 30px;
+        padding: 25px 20px;
+    }
+    #newsletter .container .heading img{
+        max-width: 70px;
+    }
+    #newsletter .container .form form .input_group {
+        width: 80%;
+    }
+    #newsletter .form input[type="submit"] {
+        width: 40%;
+    }
+
+
+}
+
+
+
+
+/** When screen size under 576px **/
+@media screen and (max-width: 575px){
+    /** hero section **/
+    #hero .container .app_download .desktop_img img{
+        display: none;
+    }
+    #hero .container .mobile_img{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /** Newsletter section **/
+    #newsletter .heading{
+        width: 100%!important;
+        justify-content: start;
+    }
+
+    #newsletter .form{
+        width: 100%!important;
+        padding-right: 0;
+    }
+}

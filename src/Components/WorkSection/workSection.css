@@ -1,0 +1,25 @@
+/** Work sectino **/
+#work{
+    background: #F3F6FF;
+    padding: 50px 0;
+}
+.body_style #work{
+    background: #222330!important;
+}
+
+
+#work .section_heading p{
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#work .container .work_images{
+    gap: 10px;
+    display: flex;
+}
+#work .container .work_images img{
+    width: 33.33%;
+}
+#work .mobile_image{
+    display: none;
+}
