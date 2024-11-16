@@ -5,7 +5,6 @@ import appStoreLogo from '../../assets/appstore.png'
 import googlePlayLogo from '../../assets/googleplay.png'
 import { FaAngleRight } from "react-icons/fa";
 
-
 const HeroSection = () => {
     return (
         <section id="hero">

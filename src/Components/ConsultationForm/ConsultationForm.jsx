@@ -1,23 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './consultationForm.css'
 
 const ConsultationForm = () => {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [specialist, setSpecialist] = useState('')
+    const [error, setError] = useState(null)
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault()
+        setError('')
+        if(!name || !email || !specialist){
+            setError('Fields can not be empty.')
+        }
+    }
+
     return (
         <div id='consultation_form'>
             <div className="form-container">
                 <h2>Get Online Consultation</h2>
-                <form>
+                <form onSubmit={handleFormSubmit}>
                     <div className="form-group">
                         <label>Full name</label>
-                        <input type="text" />
+                        <input value={name} onChange={(e)=> setName(e.target.value)} type="text" name='name' />
                     </div>
                     <div className="form-group">
                         <label>Email address</label>
-                        <input type="email" />
+                        <input value={email} onChange={(e)=> setEmail(e.target.value)} type="email" name='email' />
                     </div>
                     <div className="form-group">
                         <label>Specialist</label>
-                        <select>
+                        <select value={specialist} name='specialist' onChange={(e) => setSpecialist(e.target.value)}>
                             <option>Select a specialist</option>
                             <option>Specialist 1</option>
                             <option>Specialist 2</option>
@@ -25,6 +39,7 @@ const ConsultationForm = () => {
                         </select>
                     </div>
                     <button type="submit" className="submit-button">Make an appointment</button>
+                    <p className='mt-10' style={{color: 'red', fontWeight: 'bold'}}>{error && error}</p>
                 </form>
             </div>
         </div>

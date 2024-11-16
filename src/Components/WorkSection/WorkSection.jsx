@@ -11,8 +11,8 @@ const WorkSection = () => {
         <h2 className="text-center mb-30">How Does It Work?</h2>
         <div className="work_images flex gap-30 mt-20">
           <img className="" src={iphone12pro} alt="" />
-          <img src={iphone12pro1} alt="" />
           <img src={iphone12pro2} alt="" />
+          <img src={iphone12pro1} alt="" />
         </div>
         <div className="mobile_image">
           <img src={iphone12pro1} alt="" />

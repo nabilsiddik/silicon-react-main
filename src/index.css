@@ -216,6 +216,7 @@ section{
     }
     #header .header_top .mobile_menu_icon{
         display: block;
+        margin-top: 5px;
     }
     #header .header_top .mobile_menu_icon span{
         font-size: 20px;
@@ -232,7 +233,7 @@ section{
         gap: 0;
     }
     #hero .title_for_mobile{
-        display: block;
+        display: block!important;
         text-align: center;
         margin-bottom: 30px;
         margin-top: -30px;
@@ -254,6 +255,9 @@ section{
     }
     #hero .container .discover_more{
         margin-top: 20px;
+    }
+    #hero .desktop_img{
+        justify-content: center;
     }
 
 
@@ -341,7 +345,7 @@ section{
         text-align: center;
     }
     #faq .faq_right{
-        width: 100%;
+        width: 100%!important;
     }
 
 
@@ -375,7 +379,7 @@ section{
         display: none;
     }
     #newsletter .newsletter_mobile_text{
-        display: block;
+        display: block!important;
     }
 
 }
@@ -458,7 +462,7 @@ section{
         text-align: center;
     }
     #work .mobile_image{
-        display: block;
+        display: block!important;
         text-align: center;
     }
     #work .work_image img{

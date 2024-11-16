@@ -2,6 +2,7 @@ import React from 'react'
 import './header.css'
 import logo from '../../assets/logo.png'
 import { NavLink, useLocation } from 'react-router-dom'
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
 
@@ -43,7 +44,7 @@ console.log(typeof location.pathname)
                 </div>
                 <div className="mobile_menu_icon">
                     <span>
-                    <i className="fa-solid fa-bars" />
+                        <FaBars />
                     </span>
                 </div>
                 </div>

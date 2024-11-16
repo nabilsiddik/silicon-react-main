@@ -13,7 +13,7 @@ const ContactBanner = () => {
         <div>
             <BreadCumb/>
         </div>
-        <div className='flex gap-30'>
+        <div className='flex gap-30 banner_container'>
             <div className='banner_left'>
                 <h2>Contact page</h2>
                 <div className="mb-30">
