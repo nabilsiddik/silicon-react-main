@@ -1,23 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './header.css'
 import logo from '../../assets/logo.png'
+import logoWhite from '../../assets/logo-white.png'
 import { NavLink, useLocation } from 'react-router-dom'
 import { FaBars } from "react-icons/fa";
+import { darkModeContext } from '../../provider/DarkModeProvider';
 
 const Header = () => {
 
+const {onChecked, isDarkModeOn} = useContext(darkModeContext)
+
 const location = useLocation()
-console.log(typeof location.pathname)
+
   return (
-    <header id="header" className={`${location.pathname === '/contact' && 'bg_primary'}`}>
+    <header id="header" className={`${location.pathname === '/contact' && 'bg_primary'} ${isDarkModeOn && 'deep_dark'}`}>
         <div className="header_top">
             <div className="container flex justify-between">
             <div className="header_left flex items-center gap-20">
                 <div id="logo" className="logo">
-                <img src={logo} alt="logo" />
+                <img src={isDarkModeOn ? logoWhite : logo} alt="logo" />
                 </div>
                 <nav className="menu">
-                <ul className='flex items-center gap-10'>
+                <ul className={`${isDarkModeOn && 'darkMenu'} flex items-center gap-10`}>
                     <NavLink className='nav_link' to='/'>Home</NavLink>
                     <NavLink className='nav_link' to='/contact'>Contact</NavLink>
                 </ul>
@@ -29,7 +33,7 @@ console.log(typeof location.pathname)
                     <span className="mode_text">Dark Mode</span>
                     <div className="toggle-container">
                     <label className="switch">
-                        <input type="checkbox" id="darkModeSwitch" />
+                        <input onClick={onChecked}  type="checkbox" id="darkModeSwitch" />
                         <span className="slider" />
                     </label>
                     </div>
@@ -39,7 +43,7 @@ console.log(typeof location.pathname)
                     <span>
                         <i className="fa-regular fa-user" />
                     </span>
-                    Sign inuUp
+                    Sign in / up
                     </button>
                 </div>
                 <div className="mobile_menu_icon">

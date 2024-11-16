@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './testimonial.css'
 import Testimonial from './../Testimonial/Testimonial';
+import { darkModeContext } from '../../provider/DarkModeProvider';
 
 const TestimonialSection = () => {
 
   const [testimonial, setTestimonial] = useState([])
+  const {isDarkModeOn} = useContext(darkModeContext)
 
   useEffect(()=>{
     fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
@@ -13,7 +15,7 @@ const TestimonialSection = () => {
   }, [])
 
   return (
-    <section id="testimonial">
+    <section id="testimonial" className={`${isDarkModeOn && 'deep_dark'}`}>
     <div className="container flex justify-between gap-30">
       <div className="heading_text">
         <h2>

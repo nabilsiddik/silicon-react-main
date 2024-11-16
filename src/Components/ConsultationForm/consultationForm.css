@@ -50,3 +50,9 @@
     background-color: #5a54e0;
   }
   
+  .light_dark label{
+    color: #fff;
+  }
+  .light_dark input, .light_dark select, .light_dark option{
+    color: #000;
+  }

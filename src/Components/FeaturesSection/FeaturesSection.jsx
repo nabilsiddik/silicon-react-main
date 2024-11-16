@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './featuresSection.css'
 import featuresImage from '../../assets/image.png'
 import vectorIcon from '../../assets/Vectorr.png'
@@ -7,10 +7,16 @@ import vectorIcon2 from '../../assets/Vector (2).png'
 import vectorIcon3 from '../../assets/Vector (3).png'
 import vectorIcon4 from '../../assets/Vector (4).png'
 import vectorIcon5 from '../../assets/Vector (5).png'
+import { darkModeContext } from '../../provider/DarkModeProvider'
 
 const FeaturesSection = () => {
+
+  const {isDarkModeOn} = useContext(darkModeContext)
+
+  console.log(isDarkModeOn)
+
   return (
-    <section id="features">
+    <section id="features" className={`${isDarkModeOn && 'deep_dark'}`}>
     <div className="container flex items-center justify-between gap-30">
       <div className="features_left">
         <img src={featuresImage} alt="" />

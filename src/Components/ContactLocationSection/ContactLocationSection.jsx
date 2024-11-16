@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './contactLocation.css'
 import { IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoTimeOutline } from "react-icons/io5";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
-
+import { darkModeContext } from '../../provider/DarkModeProvider';
 
 const MediaCenter = ({ title, address, phone, hours1, hours2 }) => {
+
+    const {isDarkModeOn} = useContext(darkModeContext)
 
     return (
         <div className="media-center">

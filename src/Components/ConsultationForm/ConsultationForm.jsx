@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './consultationForm.css'
+import { darkModeContext } from '../../provider/DarkModeProvider'
 
 const ConsultationForm = () => {
 
@@ -16,9 +17,11 @@ const ConsultationForm = () => {
         }
     }
 
+    const {isDarkModeOn} = useContext(darkModeContext)
+
     return (
         <div id='consultation_form'>
-            <div className="form-container">
+            <div className={`${isDarkModeOn && 'light_dark'} form-container`}>
                 <h2>Get Online Consultation</h2>
                 <form onSubmit={handleFormSubmit}>
                     <div className="form-group">

@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './newsletterSection.css'
 import notificationIcon from '../../assets/notification.png'
 import { FaRegEnvelope } from "react-icons/fa6";
+import { darkModeContext } from './../../provider/DarkModeProvider';
 
 
 const NewsLetterSection = () => {
 
   const [email, setEmail] = useState('')
   const [error, setError] = useState(null)
+  const {isDarkModeOn} = useContext(darkModeContext)
+
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault()
@@ -19,8 +22,8 @@ const NewsLetterSection = () => {
   }
 
   return (
-    <section id="newsletter">
-        <div className="container flex items-center">
+    <section id="newsletter" className={`${isDarkModeOn && 'deep_dark'}`}>
+        <div className={`${isDarkModeOn && 'light_dark'} container flex items-center`}>
         <div className="heading flex items-center gap-20">
             <img src={notificationIcon} alt="" />
             <h3>

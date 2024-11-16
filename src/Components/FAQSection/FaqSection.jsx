@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './faq.css'
 import { FaAngleDown } from "react-icons/fa";
 import Accordion from '../Accordion/Accordion';
 import { FaArrowRight } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { IoChatbubbleEllipses } from "react-icons/io5";
+import { darkModeContext } from '../../provider/DarkModeProvider';
 
 const FaqSection = () => {
 
+    const {isDarkModeOn} = useContext(darkModeContext)
+
     const [faq, setFaq] = useState([])
+    const [openIndex, setOpenIndex] = useState(null)
+
+    const handleAccordionToggle = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    }
 
     useState(()=>{
         fetch('https://win24-assignment.azurewebsites.net/api/faq')
@@ -18,7 +26,7 @@ const FaqSection = () => {
 
 
   return (
-    <section id="faq">
+    <section id="faq" className={`${isDarkModeOn && 'deep_dark'}`}>
             <div className="container flex justify-between gap-30">
             <div className="section_heading_mobile mb-30">
                 <h2>
@@ -67,8 +75,8 @@ const FaqSection = () => {
             <div className="faq_right">
                 <div className="accordion">
                 <ul className="flex direction-column gap-10">
-                    {faq.length > 0 && faq.map((faqItem) => {
-                        return <Accordion key={faqItem.id} faq = {faqItem}/>
+                    {faq.length > 0 && faq.map((faqItem, index) => {
+                        return <Accordion key={faqItem.id} faq = {faqItem} isOpen={openIndex === index} onToggle={() => handleAccordionToggle(index)}/>
                     })}
                 </ul>
                 </div>

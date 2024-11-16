@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './CtaSection.css'
 import ctaImgRight from '../../assets/image (2).png'
 import ctaImgLeft from '../../assets/image (1).png'
 import { FaRegCheckCircle } from "react-icons/fa";
 import vectorIcon from '../../assets/Vectorr.png'
 import vectorIcon4 from '../../assets/Vector (4).png'
+import { darkModeContext } from '../../provider/DarkModeProvider';
 
 const CtaSection = () => {
+  const {isDarkModeOn} = useContext(darkModeContext)
   return (
-    <section id="cta">
+    <section id="cta" className={`${isDarkModeOn && 'deep_dark'}`}>
       <div className="container">
         {/* CTA Rwo 1 */}
         <div className="cta_row_1 flex items-center justify-between gap-30">

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import quotesIcon from '../../assets/quotes.png'
 import { FaStar } from "react-icons/fa";
+import { darkModeContext } from '../../provider/DarkModeProvider';
+
 
 const Testimonial = ({testimonial}) => {
+    const {isDarkModeOn} = useContext(darkModeContext)
     return (
-        <div className="testimonial flex direction-column gap-10">
+        <div className={`${isDarkModeOn && 'light_dark'} testimonial flex direction-column gap-10`}>
             <span className="quote_icon">
                 <img src={quotesIcon} alt="" />
             </span>

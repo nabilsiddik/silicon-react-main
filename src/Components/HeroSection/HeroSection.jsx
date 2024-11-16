@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './heroSection.css'
 import heroImage from '../../assets/hero.svg'
 import appStoreLogo from '../../assets/appstore.png'
 import googlePlayLogo from '../../assets/googleplay.png'
+
+import appStoreLogoWhite from '../../assets/appstore-white-desk.png'
+import googlePayLogoWhite from '../../assets/googleplay-white-desk.png'
+
+
+import appStoreLogoWhiteMobile from '../../assets/app-white-mobile.png'
+import playWhiteMobile from '../../assets/play-white-mobile.png'
+
 import { FaAngleRight } from "react-icons/fa";
+import { darkModeContext } from '../../provider/DarkModeProvider'
 
 const HeroSection = () => {
+    
+    const {isDarkModeOn} = useContext(darkModeContext)
+
     return (
-        <section id="hero">
+        <section id="hero" className={`${isDarkModeOn && 'deep_dark'}`}>
             <div className="container">
                 <div className="title_for_mobile">
                     <h1>
@@ -27,17 +39,17 @@ const HeroSection = () => {
                         </p>
                         <div className="app_download flex items-center gap-10">
                             <div className="desktop_img flex items-center gap-5">
-                                <img id="app_store_desktop" src={appStoreLogo} alt="" />
-                                <img id="play_store_desktop" src={googlePlayLogo} alt="" />
+                                <img id="app_store_desktop" src={isDarkModeOn ? appStoreLogoWhite : appStoreLogo} alt="" />
+                                <img id="play_store_desktop" src={isDarkModeOn ? googlePayLogoWhite : googlePlayLogo} alt="" />
                             </div>
                         </div>
                         <div className="mobile_img">
-                            <img id="app_store_mobile" src={appStoreLogo} alt="" />
-                            <img id="play_store_mobile" src={googlePlayLogo} alt="" />
+                            <img id="app_store_mobile" src={isDarkModeOn ? appStoreLogoWhiteMobile : appStoreLogo} alt="" />
+                            <img id="play_store_mobile" src={isDarkModeOn ? playWhiteMobile : googlePlayLogo} alt="" />
                         </div>
                     </div>
                     <div className="flex items-center gap-10 mb-30 discover_more">
-                        <span className="icon">
+                        <span className={`${isDarkModeOn && 'light_dark'} icon`}>
                             <FaAngleRight />
                         </span>
                         <span className="text">Discover More</span>

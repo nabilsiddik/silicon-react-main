@@ -178,8 +178,8 @@ button{
 }
 
 section{
-    margin-top: 70px;
-    margin-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .body_style .icon{
@@ -263,7 +263,7 @@ section{
 
     /** Brand Section responsive **/
     #brand_section .res_hide{
-        display: none;
+        display: none!important;
     }
 
 
@@ -440,7 +440,9 @@ section{
         display: none;
     }
 
-
+    #brand_section{
+        display: none!important;
+    }
 
     /** Features Section Responsive **/
     #features .section_heading{
@@ -521,7 +523,7 @@ section{
         display: none;
     }
     #hero .container .mobile_img{
-        display: flex;
+        display: flex!important;
         flex-direction: column;
         gap: 10px;
     }
@@ -537,4 +539,27 @@ section{
         width: 100%!important;
         padding-right: 0;
     }
+}
+
+
+
+
+/** dark mode style **/
+.deep_dark{
+    background: #0B0F19!important;
+}
+.deep_dark *{
+    color: #fff;
+}
+.light_dark {
+    background: #161b29!important;
+}
+.light_dark *{
+    color: #fff;
+}
+#testimonial ul *{
+    color: #FFBA08!important; 
+}
+.light_dark_dark{
+    background: #0f131c!important;
 }

@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import BreadCumb from '../Breadcumb/BreadCumb'
 import ContactBox from '../ContactBox/ContactBox'
 import { FaRegEnvelope } from "react-icons/fa";
 import { LuUsers2 } from "react-icons/lu";
 import './contactBanner.css'
 import ConsultationForm from '../ConsultationForm/ConsultationForm';
+import { darkModeContext } from '../../provider/DarkModeProvider';
 
 const ContactBanner = () => {
+
+  const {isDarkModeOn} = useContext(darkModeContext)
+
+
   return (
-    <div id='contact_banner'>
+    <div id='contact_banner' className={`${isDarkModeOn && 'deep_dark'}`}>
         <div className="container">
         <div>
             <BreadCumb/>

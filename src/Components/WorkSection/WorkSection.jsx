@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './workSection.css'
 import iphone12pro from '../../assets/iPhone 12 Pro.png'
 import iphone12pro1 from '../../assets/iPhone 12 Pro (1).png'
 import iphone12pro2 from '../../assets/iPhone 12 Pro (2).png'
+import { darkModeContext } from '../../provider/DarkModeProvider'
 
 const WorkSection = () => {
+
+  const {isDarkModeOn} = useContext(darkModeContext)
+
   return (
-    <section id="work">
+    <section id="work" className={`${isDarkModeOn && 'deep_dark'}`}>
       <div className="container flex direction-column items-center">
         <h2 className="text-center mb-30">How Does It Work?</h2>
         <div className="work_images flex gap-30 mt-20">

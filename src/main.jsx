@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './Pages/Home/Home.jsx'
 import Contact from './Pages/Contact/Contact';
+import DarkModeProvider from './provider/DarkModeProvider.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -26,6 +27,8 @@ const routes = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router = {routes}></RouterProvider>
+    <DarkModeProvider>
+      <RouterProvider router = {routes}></RouterProvider>
+    </DarkModeProvider>
   </React.StrictMode>,
 )
